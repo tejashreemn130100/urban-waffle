@@ -3,23 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Survey for Technology Usage</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .survey-container {
+            width: 50%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+        .survey-container h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .survey-container label {
+            font-size: 16px;
+            margin-top: 15px;
+            display: block;
+        }
+        .survey-container input, .survey-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .survey-container {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
-<body class="survey-bg">
-
-    <div class="content">
-        <h2>Survey on Technology Usage</h2>
-        <form action="birthday.html" method="get">
-            <label for="name-age">Name and Age:</label>
-            <textarea id="name-age" name="nameAge" required></textarea>
-
-            <label for="device-hours">Daily Device Usage (in hours):</label>
-            <textarea id="device-hours" name="hours" required></textarea>
-
-            <button type="submit" class="button">Next</button>
+<body>
+    <div class="survey-container">
+        <h2>Survey for Technology Usage in Daily Life</h2>
+        <form id="surveyForm">
+            <label for="question1">1. Please Enter your name and your Age.</label>
+            <textarea id="question1" required></textarea>
+            
+            <label for="question1">2. How many hours do you spend using digital devices (such as smartphones, laptops, tablets) per day?</label>
+            <textarea id="question1" required></textarea>
+            
+            <label for="question2">3. Which technology or device do you use the most in your daily routine?</label>
+            <input type="text" id="question2" required>
+            
+            <label for="question3">4. What is the primary purpose of your technology usage?</label>
+            <textarea id="question3" required></textarea>
+            
+            <label for="question4">5.How has technology improved your efficiency in day-to-day activities?</label>
+            <input type="text" id="question4" required>
+            
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
 
+    <script>
+        const form = document.getElementById('surveyForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'birthday.html';
+        });
+    </script>
 </body>
 </html>
