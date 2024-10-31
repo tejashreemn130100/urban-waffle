@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration for Nagesh</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lightbox CSS for Gallery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Buttons -->
+    <nav>
+        <button onclick="showSection('survey')">Survey</button>
+        <button onclick="showSection('birthday')">Birthday</button>
+        <button onclick="showSection('gallery')">Gallery</button>
+        <button onclick="showSection('secret-message')">Secret Message</button>
+    </nav>
+
+    <!-- Survey Section -->
+    <section id="survey" class="page-section">
+        <div class="survey-container">
+            <h2>Survey for Technology Usage in Daily Life</h2>
+            <form id="surveyForm">
+                <label for="question1">1. Name and Age:</label>
+                <textarea id="question1" required></textarea>
+                <label for="question2">2. Daily Digital Device Usage (hours):</label>
+                <textarea id="question2" required></textarea>
+                <label for="question3">3. Most-used Technology/Device:</label>
+                <input type="text" id="question3" required>
+                <label for="question4">4. Main Purpose of Technology Usage:</label>
+                <textarea id="question4" required></textarea>
+                <label for="question5">5. Impact on Efficiency:</label>
+                <input type="text" id="question5" required>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Birthday Section -->
+    <section id="birthday" class="page-section">
+        <div class="hearts">
+            <div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div>
+        </div>
+        <div class="birthday-container centered">
+            <h1 class="slide-right">Happy Birthday, Charu! Wishing You a Wonderful Day!</h1>
+            <h2 class="slide-left">I love you the most.</h2>
+            <div class="message-box">
+                <p class="fade-in">Today is a special day, Charu! Here’s to many more chapters in our friendship!</p>
+                <p class="fade-in">Wishing you joy, calmness, and great reads!</p>
+                <p class="fade-in">With love,</p>
+                <p class="fade-in">Deepthi❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="page-section">
+        <h1>Memory Gallery</h1>
+        <p class="quote">"Moments we cherish, memories we keep close."</p>
+        <div class="gallery">
+            <a href="image1.jpg" data-lightbox="gallery"><img src="image1.jpg" alt="Memory 1"></a>
+            <a href="image2.jpg" data-lightbox="gallery"><img src="image2.jpg" alt="Memory 2"></a>
+            <a href="image3.jpg" data-lightbox="gallery"><img src="image3.jpg" alt="Memory 3"></a>
+            <a href="image4.jpg" data-lightbox="gallery"><img src="image4.jpg" alt="Memory 4"></a>
+            <a href="image5.jpg" data-lightbox="gallery"><img src="image5.jpg" alt="Memory 5"></a>
+        </div>
+    </section>
+
+    <!-- Secret Message Section -->
+    <section id="secret-message" class="page-section">
+        <div class="secret-container">
+            <h2>Secret Message</h2>
+            <p>"Dear Nagesh, our friendship has been one of life’s greatest gifts. Through every season, your presence has been my strength and joy. Here’s to more unforgettable memories!"</p>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to show and hide sections
+        function showSection(sectionId) {
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Show the Survey section by default
+        showSection('survey');
+
+        // Form submission logic
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for completing the survey!');
+            showSection('birthday');
+        });
+    </script>
+</body>
+</html>
