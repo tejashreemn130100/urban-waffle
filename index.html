@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey for Daily Technology Usage</title>
+    <title>Survey</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-image: url('survey-bg.jpg'); background-size: cover;">
+<body class="survey-bg">
 
-    <div class="container">
-        <h2>Survey for Technology Usage in Daily Life</h2>
-        <form id="surveyForm" action="birthday.html">
-            <label for="question1">1. Name and Age:</label>
-            <textarea id="question1" required></textarea>
-            <label for="question2">2. Daily Digital Device Usage (hours):</label>
-            <textarea id="question2" required></textarea>
-            <button type="submit" class="next-btn">Next</button>
+    <div class="content">
+        <h2>Survey on Daily Technology Usage</h2>
+        <form action="birthday.html" method="get">
+            <label>Name and Age:</label>
+            <textarea name="nameAge" required></textarea>
+
+            <label>Hours Spent on Digital Devices Daily:</label>
+            <textarea name="hours" required></textarea>
+
+            <button type="submit" class="button">Next</button>
         </form>
     </div>
+
 </body>
 </html>
